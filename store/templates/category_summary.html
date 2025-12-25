@@ -2,7 +2,7 @@
 {% block content %}
 
 <!-- Header-->
-<header class="bg-dark py-5">
+<header class="py-5" style="background-color: #163067;">
     <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
             <h1 class="display-4 fw-bolder">Categories</h1>
@@ -12,18 +12,23 @@
 </header>
 
 <div class="container">
+    <br><br>
     <div class="row">
-        <center>
-            <div class="col-10">
-                <br><br>
-                
-                {% for category in categories%}
-                    <h3><a href="{% url 'category' category %}">{{ category }}</a></h3>
-
-                {% endfor %}
-                <br><br><br><br><br><br><br><br><br><br>
+        {% for category in categories %}
+            <div class="col-md-4 mb-5">
+                <div class="card">
+                    <div class="card-header" style="background-color: #a397b2;">
+                        <h4 style="color: white;">{{ category }}</h4>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ category }} Products</h5>
+                        <p class="card-text">Explore all products in this category and find what you're looking for.</p>
+                        <a href="{% url 'category' category %}" class="btn btn-outline-secondary">See Products</a>
+                    </div>
+                </div>
             </div>
-        </center>
+        {% endfor %}
+        <br><br><br><br><br><br><br><br><br><br>
     </div>
 </div>
 

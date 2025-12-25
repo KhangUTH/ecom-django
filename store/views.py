@@ -124,7 +124,8 @@ def product(request,pk):
 
 def home(request):
     products = Product.objects.all()
-    return render(request, 'home.html', {'products':products})
+    sale_products = Product.objects.filter(is_sale=True)[:5]
+    return render(request, 'home.html', {'products':products, 'sale_products':sale_products})
 
 def about(request):
     return render(request, 'about.html', {})

@@ -13,8 +13,10 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="{% url 'category_summary' %}">All Products</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="{% url 'category' 'ETC' %}">ETC</a></li>
-                        <li><a class="dropdown-item" href="{% url 'category' 'Demo' %}">Demo</a></li>
+                        <li><a class="dropdown-item" href="{% url 'category' 'Shoes' %}">Shoes</a></li>
+                        <li><a class="dropdown-item" href="{% url 'category' 'Shorts' %}">Shorts</a></li>
+                        <li><a class="dropdown-item" href="{% url 'category' 'T-Shitrt' %}">T-Shitrt</a></li>
+                        <li><a class="dropdown-item" href="{% url 'category' 'Outerwear' %}">Outerwear</a></li>
                     </ul>
                 </li>
     {% if user.is_authenticated%}
